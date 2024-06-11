@@ -1,10 +1,10 @@
 const mongoose=require("mongoose")
 const schema=mongoose.Schema({
-    "empname":String,
-    "id":String,
-    "salary":String,
-    "department":String
+    "empname":{type:String,required:true},
+    "id":{type:String,required:true},
+    "salary":{type:String,required:true},
+    "department":{type:String,required:true}
 })
 
-let employeesmodel=mongoose.model("employees",schema);
-module.exports={employeesmodel}
+let employeemodel=mongoose.model("employees",schema);
+module.exports={employeemodel}
